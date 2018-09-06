@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
+    $dbPost = DB::table('posts')->where('id', 21)->get();
     return view('welcome');
 });
+
+Route::get('accessor/index', 'AccessorController@index');
